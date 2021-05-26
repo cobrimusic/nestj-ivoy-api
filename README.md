@@ -8,7 +8,7 @@
 $ docker-compose up
 ```
 
-# start the GraphQL Playground (GraphQL is started at http://localhost:3000/graphql)
+Start the GraphQL Playground (GraphQL is started at http://localhost:3000/graphql)
 
 ## Running some querys
 
