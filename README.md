@@ -48,10 +48,10 @@ query {
 ```
 
 ```js
-    query {
-        ivoyService(id: "mongo-id") {
-            name
-            created
-        }
+query {
+    ivoyService(id: "mongo-id") {
+        name
+        created
     }
+}
 ```
