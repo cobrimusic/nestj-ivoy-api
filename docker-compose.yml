@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+    backend:
+        container_name: nestjs_ivoy_api_dev
+        image: nestjs-ivoy-api-dev:1.0.0
+        restart: always
+        build:
+            context: .
+            target: development
+            dockerfile: ./Dockerfile
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - 3000:3000
+            - 9229:9229
+        command: npm run start:dev
+        networks:
+            - ivoy
+        depends_on:
+            - mongo
+    mongo:
+        image: "mongo:4.4"
+        container_name: mongo
+        restart: always
+        ports:
+            - "27017:27017"
+        networks: 
+            - ivoy
+networks:
+    ivoy:
