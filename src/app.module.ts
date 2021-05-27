@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { IvoyServicesModule } from './ivoy-services/ivoy-services.module';
+import { IvoyServicesRestModule } from './ivoy-services-rest/ivoy-services-rest.module';
 
 @Module({
 	imports: [
@@ -12,6 +13,7 @@ import { IvoyServicesModule } from './ivoy-services/ivoy-services.module';
 			autoSchemaFile: true,
 		}),
 		IvoyServicesModule,
+		IvoyServicesRestModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],
