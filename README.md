@@ -1,6 +1,6 @@
 ## Description
 
-[Nest](https://github.com/nestjs/nest) app with Typescript, Mongoose and Docker.
+[Nest](https://github.com/nestjs/nest) app with Typescript, GraphQL, Mongoose and Docker.
 
 ## Running the app
 
@@ -54,4 +54,11 @@ query {
         created
     }
 }
+```
+
+## Request by APIRest
+
+```bash
+$ 127.0.0.1:3000/services [GET | POST]
+$ 127.0.0.1:3000/services/:id [GET]
 ```

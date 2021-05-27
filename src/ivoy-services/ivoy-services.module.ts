@@ -1,11 +1,11 @@
 import { NestjsQueryGraphQLModule } from '@nestjs-query/query-graphql';
 import { NestjsQueryMongooseModule } from '@nestjs-query/query-mongoose';
 import { Module } from '@nestjs/common';
-import { IvoyServicesDTO } from './ivoy-services.dto';
+import { IvoyServicesDTO } from '../dtos/ivoy-services.dto';
 import {
 	IvoyServicesEntity,
 	IvoyServicesEntitySchema,
-} from './ivoy-services.entity';
+} from '../schemas/ivoy-services.entity';
 
 @Module({
 	imports: [

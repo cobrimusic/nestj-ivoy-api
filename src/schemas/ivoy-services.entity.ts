@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-@Schema({ timestamps: { createdAt: 'created', updatedAt: 'updated' } })
+@Schema({ timestamps: { createdAt: 'created', updatedAt: 'updated' }, versionKey: false })
 export class IvoyServicesEntity extends Document {
 	@Prop({ required: true })
 	name!: string;
